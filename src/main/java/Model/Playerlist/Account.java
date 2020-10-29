@@ -35,7 +35,10 @@ public class Account {
     }
 
     //Getters and setters
-    public int getStartingBalance(){ setBalance(1000); return balance; }
+    public int getStartingBalance(){
+        setBalance(1000);
+        return balance; }
+
     public int getBalance() {
         return balance;
     }
