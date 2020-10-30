@@ -32,14 +32,44 @@ public class Player {
         this.currentPosition = (currentPosition + position) % fieldLength;
     }
 
-    public int getCurrentPosition() { return currentPosition; }
-    public  void setCurrentPosition(int position){ this.currentPosition = position; }
-    public void incrementTurn(){ turn++; }
-    public int getTurn(){ return turn;}
-    public Color getColor() { return color; }
-    public void setColor(Color color) { this.color = color; }
-    public String getName() { return name; }
-    public void setName(String name) { this.name = name; }
+    public int getCurrentPosition() {
+        return currentPosition;
+    }
+
+
+    public  void setCurrentPosition(int position){
+        this.currentPosition = position;
+    }
+
+
+    public void incrementTurn(){
+        turn++;
+    }
+
+
+    public int getTurn(){
+        return turn;
+    }
+
+
+    public Color getColor() {
+        return color;
+    }
+
+
+    public void setColor(Color color) {
+        this.color = color;
+    }
+
+
+    public String getName() {
+        return name;
+    }
+
+
+    public void setName(String name) {
+        this.name = name;
+    }
 
     public String toString(){
         return name;
