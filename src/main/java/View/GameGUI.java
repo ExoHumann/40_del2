@@ -1,6 +1,7 @@
 
 package View;
 
+import Controller.Game;
 import Model.Dice;
 import gui_fields.*;
 import gui_main.GUI;
@@ -85,15 +86,15 @@ public class GameGUI {
     }
 
 
-    public String setPlayerName(){ return gui.getUserString("Write player name: "); }
+    public String setPlayerName(){ return gui.getUserString(Game.translation.getPlayerNameAction()); }
 
-    public int setPlayerAmount(){ return gui.getUserInteger("Chose 2-6 players", 2, 6);}
+    public int setPlayerAmount(){ return gui.getUserInteger(Game.translation.getPlayerSelectAction(), 2, 6);}
 
     public void showDice(int dice1, int dice2){ gui.setDice(dice1,dice2); }
 
-    public void rollDiceAction(PlayerList pl, int PNum){ gui.showMessage(pl.getPlayerList(PNum).getName() + " do you want to roll dice?"); }
+    public void rollDiceAction(PlayerList pl, int PNum){ gui.showMessage(pl.getPlayerList(PNum).getName() + " " + Game.translation.getRollDiceAction()); }
 
-    public void displayWinner(PlayerList pl, int PNum) { gui.showMessage(pl.getPlayerList(PNum).getName() + " Has won the game with balance of " + pl.getAccount(PNum).getBalance()); }
+    public void displayWinner(PlayerList pl, int PNum) { gui.showMessage(pl.getPlayerList(PNum).getName() + " " + Game.translation.getWonTheGameString() + pl.getAccount(PNum).getBalance()); }
 
     public void closeGame() { gui.close(); }
 }

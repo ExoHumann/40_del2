@@ -1,5 +1,7 @@
 package Model;
 
+import Controller.Game;
+
 import java.awt.*;
 
 public class Field {
@@ -36,7 +38,8 @@ public class Field {
 
 
     public String toString(){
-        return ("Title:" + getTitle() + "\n" +  "Price:" + getPrice() + "\n" + "Description " + getDescription() + "\n");
+        String string = String.format(Game.translation.getFieldToString(),getTitle(),getPrice(),getDescription());
+        return string;
     }
 
 }

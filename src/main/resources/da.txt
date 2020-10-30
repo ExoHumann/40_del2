@@ -1,0 +1,33 @@
+LandedString
+%s landed på plads nr %d %s og du vil modtage/betale prisen på dette felt %d%n
+WonString
+Du har vundet med en balance på:
+DiceInfo
+Navn: %s  Terninge resultat: %d + %s = %d Position = %d  Balance: = %s
+TakingTurnString
+Spilleren %s tager nu sin tur
+DisplayTurnString
+%s har taget: %d Tur(e)
+FieldToString
+Title: %s \n Pris: %d \n  Beskrivelse %s \n
+PlayerNameAction
+Indtast spiller navn:
+PlayerSelectAction
+Vælg 2-6 spillere
+RollDiceAction
+vil du slå med terningerne?
+WonTheGameString
+Har vundet spillet med en balance på:
+fieldsName
+Detter er det første felt
+Tårn
+Krater
+Paladsets porte
+kold ørken
+Beskyttet by
+Kloster
+Sort hule
+Hytter i bjergene
+Vareulvvæggen
+Hullet
+Guldminen

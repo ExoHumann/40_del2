@@ -4,6 +4,7 @@ import Model.Dice;
 import Model.FieldList;
 import Model.PlayerList;
 import Model.Playerlist.*;
+import Translation.Translator;
 
 public class Logic {
 
@@ -42,7 +43,7 @@ public class Logic {
             default:
                 break;
         }
-        System.out.printf("%s landed on the field nr %d %s and you will receive/pay the price of this field %d%n",
+        System.out.printf(Game.translation.getLandedString(),
                 player.getName(), pos, fl.getField(pos).getTitle(), fl.getField(pos).getPrice());
     }
 
@@ -60,23 +61,20 @@ public class Logic {
     }
 
     public void findWinner(PlayerList pl, int playerTurn){
-        System.out.println(pl.getPlayerList(playerTurn).getName() + " Has won with the balance of" + pl.getAccount(playerTurn).getBalance());
+        System.out.println(pl.getPlayerList(playerTurn).getName() + Game.translation.getWonString() + pl.getAccount(playerTurn).getBalance());
     }
 
 
     public void diceInfo(PlayerList pl, Dice dice, int PNum) {
-        System.out.println("Name: " + pl.getPlayerList(PNum).getName() +
-                " Dice Results " + dice.getDie1() + "+" + dice.getDie2() + "=" + dice.getSum() +
-                " Position = " + pl.getPlayerList(PNum).getCurrentPosition() +
-                " Balance: = " + pl.getAccount(PNum).getBalance() );
+        System.out.printf(Game.translation.getDiceInfo() +"\n",pl.getPlayerList(PNum).getName(),dice.getDie1(),dice.getDie2(),dice.getSum(),pl.getPlayerList(PNum).getCurrentPosition(),pl.getAccount(PNum).getBalance());
     }
 
     public void displayTakingTurn(PlayerList pl, int PNum){
-        System.out.println("The player " + pl.getPlayerList(PNum).getName() + " is now taking his turn turn");
+        System.out.printf(Game.translation.getTakingTurnString()+ "\n",pl.getPlayerList(PNum).getName());
     }
 
     public void displayTurn(PlayerList pl, int PNum){
-        System.out.println(pl.getPlayerList(PNum).getName() + " has taken: " + pl.getPlayerList(PNum).getTurn() + " Turn(s)");
+        System.out.printf(Game.translation.getDisplayTurnString()+ "\n", pl.getPlayerList(PNum).getName(),pl.getPlayerList(PNum).getTurn());
     }
 
     public int getPrePos() { return prePos; }

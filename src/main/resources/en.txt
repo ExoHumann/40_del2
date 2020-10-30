@@ -1,0 +1,33 @@
+LandedString
+%s landed on the field nr %d %s and you will receive/pay the price of this field %d%n
+WonString
+Has won with the balance of
+DiceInfo
+Name: %s  Dice Results: %d + %s = %d Position = %d  Balance: = %s
+TakingTurnString
+The player %s is now taking his turn
+DisplayTurnString
+%s has taken: %d Turn(s)
+FieldToString
+Title: %s \n Price: %d \n  Description %s \n
+PlayerNameAction
+Write player name:
+PlayerSelectAction
+Chose 2-6 players
+RollDiceAction
+do you want to roll dice?
+WonTheGameString
+Has won the game with balance of
+fieldsName
+This is the first field
+Tower
+Crater
+Palace gates
+Cold Desert
+Walled City
+Monastery
+Black cave
+Huts in the mountain
+The werewall
+The pit
+Goldmine
